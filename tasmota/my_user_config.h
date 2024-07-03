@@ -50,10 +50,10 @@
 #define PROJECT                "WattWaechter"         // PROJECT is used as the default topic delimiter
 
 // If not selected the default will be SONOFF_BASIC
-//#define MODULE                 SONOFF_BASIC      // [Module] Select default module from tasmota_template.h
+#define MODULE                 WEMOS      // [Module] Select default module from tasmota_template.h
 #ifdef ESP8266
-#define FALLBACK_MODULE        SONOFF_BASIC      // [Module2] Select default module on fast reboot where USER_MODULE is user template
-//#define USER_TEMPLATE "{\"NAME\":\"Generic\",\"GPIO\":[1,1,1,1,1,1,1,1,1,1,1,1,1,1],\"FLAG\":0,\"BASE\":18}"  // [Template] Set JSON template
+#define FALLBACK_MODULE        WEMOS      // [Module2] Select default module on fast reboot where USER_MODULE is user template
+#define USER_TEMPLATE "{\"NAME\":\"WattWächter Wi-Fi / USB\",\"GPIO\":[0,1,0,1,1,1,0,0,1,0,1,0,0,0],\"FLAG\":0,\"BASE\":18,\"CMND\":\"Module 0\"}" // [Template] Set JSON template
 #endif  // ESP8266
 #ifdef ESP32
 #define FALLBACK_MODULE        WEMOS             // [Module2] Select default module on fast reboot where USER_MODULE is user template
